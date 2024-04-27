@@ -1,0 +1,83 @@
+<!-- index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" href="css/style.css">
+  <title> Home | ⋆ ˚ ｡⋆౨ৎ˚ </title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!--trying to make css work on github-->
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text">Welcome to <em>[music ⋆ 4 ⋆ mood]</em></h1>
+
+    <div class="info-text">
+      <p1 class="text1 delayed">first, we need some information from you!</p1>
+    </div>
+
+  </div>
+
+  <form id="myForm"> <!--form fields-->
+
+    <div>
+      <label for="fname">first name:</label>
+      <input type="text" id="fname" name="fname" placeholder="ur mom" required>
+    </div>
+    <br>
+    <div>
+      <label for="lname">last name:</label>
+      <input type="text" id="lname" name="lname" placeholder="ur dad" required>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+  <script>
+
+    // showResult();
+    // function showResult() {
+    //  form.addEventListener('submit', (e) => {
+    //   e.preventDefault();
+    // const fd = new FormData(form);
+    // const obj = Object.fromEntries(fd);
+    // console.log(obj);
+    // const json = JSON.stringify(obj);
+    // localstorage.setItem('form', json);
+
+    // };
+
+    //TRYING TO FORM DATA INPUTTED ): WONT VWORK
+
+    window.location.href = "mood.html";
+  }
+    function showLoadingPage(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      const firstNameInput = document.getElementById('fname');
+      const lastNameInput = document.getElementById('lname');
+
+      const firstName = firstNameInput.value;
+      const lastName = lastNameInput.value;
+
+      // Option 1: Pass form values as query parameters
+      const url = `loading.html?
+  fname=${encodeURIComponent(firstName)}&lname=${encodeURIComponent(lastName)}`;
+      window.location.href = url;
+      // Option 2: Store form values in localStorage (or sessionStorage)
+      // localStorage.setItem('firstName', firstName);
+      // localStorage.setItem('lastName', lastName);
+      // window.location.href = 'loading.html';
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

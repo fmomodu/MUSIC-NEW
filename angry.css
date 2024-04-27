@@ -1,0 +1,146 @@
+/* angry.css */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* Changed from 'justify-content' to 'flex-direction' */
+  align-items: center;
+  min-height: 100vh;
+  background-color: orangered;
+}
+
+.container {
+  text-align: center;
+}
+
+h2 {
+  font-size: 77px;
+  font-feature-settings: ;
+  margin-bottom: 20px;
+  color: darkred;
+}
+
+.song img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 2, 0, 0.1);
+}
+
+/*.card {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+  display: inline-block;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+} */
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px);
+    /* Adjust width for smaller screens */
+    margin: 20px 20px 20px 0;
+    /* Adjust margin for smaller screens */
+  }
+}
+
+.song {
+  position: relative;
+  text-align: center;
+}
+
+.like-btn {
+  width: 50px;
+  height: 50px;
+  background-color: darkred;
+  /* Background color */
+  border: 2px solid white;
+  border-radius: 50%;
+  /* Rounded corners */
+  padding: 5px;
+  /* Padding */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 50px);
+  /* Pushes the button to the right */
+  transform: translateY(-50%);
+}
+
+.like-btn:before {
+  content: '\2665';
+  font-size: 30px;
+  color: white;
+  /* Color of the heart symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dislike-btn {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  /* White background */
+  border: 2px solid red;
+  /* Red border */
+  border-radius: 50%;
+  /* Rounded corners */
+  padding: 5px;
+  /* Padding */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 50px);
+  /* Pushes the button to the left */
+  transform: translateY(-50%);
+}
+
+.dislike-btn:before {
+  content: '\2718';
+  font-size: 30px;
+  /* Adjust font size */
+  color: red;
+  /* Red color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

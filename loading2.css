@@ -1,0 +1,20 @@
+body {
+  cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1002.cur), default;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}

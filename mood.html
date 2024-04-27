@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Selection | ⋆｡˚ ⋆</title>
+  <link rel="stylesheet" href="mood.css">
+</head>
+
+<body>
+  <main>
+    <h2>
+      <div id="data"></div>
+    </h2>
+  </main>
+  <div class="container">
+    <h3>How are you feeling today?</h3>
+    <div class="mood-options">
+      <a class="mood-btn" href="happy.html" data-mood="happy"> 😁 Happy</button>
+        <a class="mood-btn" href="sad.html" data-mood="sad"> 🫂 Sad</a>
+        <a class="mood-btn" href="inlove.html" data-mood="in love"> 💌 <br>Lovely</a>
+        <a class="mood-btn" href="confident.html" data-mood="confident"> 💋 Confident</a>
+        <a class="mood-btn" href="neutral.html" data-mood="neutral"> 🔀 <br>Surprised</a>
+
+
+        <!-- Add more mood options as needed -->
+    </div>
+
+
+
+
+  </div>
+  <script type="module" src="mood.js"></script>
+  <script>
+    const json = localstorage.getItem('form')
+    const obj = JSON.parse(json);
+
+    for (key in obj) {
+      const makrkup =
+        <div>
+          <span>${key}; $(obj[key]}</span>
+        </div>
+        ;
+      document.getElementbyId('data').innerHTML = markup;
+    }
+  </script>
+</body>
+
+</html>

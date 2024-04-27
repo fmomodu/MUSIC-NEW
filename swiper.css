@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-container {
+    width: 300px; /* Adjust card width as needed */
+    height: 400px; /* Adjust card height as needed */
+    background-color: #fff; /* Card background color */
+    border-radius: 10px; /* Adjust card border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Card shadow */
+    overflow: hidden; /* Hide overflow for the container */
+}
+
+.card {
+    width: 100%; /* Ensure the card covers the container */
+    height: 100%; /* Ensure the card covers the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    max-width: 100%; /* Ensure the image fits within the card */
+    max-height: 100%; /* Ensure the image fits within the card */
+    object-fit: contain; /* Ensure the entire image is visible */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Songs...</title>
+  <link rel="stylesheet" href="loading2.css">
+</head>
+
+<body>
+  <div class="loading-container">
+    <h2>Loading your songs...</h2>
+    <div class="loading-animation">
+      <img src="images/ty_gif.gif" alt="gif of Tyler Creator in F-ing Young Music Video."
+        style="width:150px;height:150px;">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectedMood = sessionStorage.getItem('selectedMood');
+
+      // After a delay, navigate to the respective mood page
+      setTimeout(() => {
+        switch (selectedMood) {
+          case 'happy':
+            window.location.href = 'happy.html';
+            break;
+          case 'neutral':
+            window.location.href = 'neutral.html';
+            break;
+          case 'sad':
+            window.location.href = 'sad.html';
+            break;
+          case 'angry':
+            window.location.href = 'angry.html';
+            break;
+          case 'in love':
+            window.location.href = 'inlove.html';
+            break;
+          case 'confident':
+            window.location.href = 'confident.html';
+            break;
+          // Add more cases for additional mood options as needed
+          default:
+            // Handle default case if needed
+            break;
+        }
+      }, 2000); // Adjust the delay duration as needed
+    });
+  </script>
+</body>
+
+</html>
